@@ -24,7 +24,12 @@
         <Preference
             android:key="navigation_options"
             android:fragment="com.abc.settings.NavbarSettings"
-        android:title="@string/navigationbar_settings_title" />
+            android:title="@string/navigationbar_settings_title" />
+		
+        <Preference
+            android:key="buttons_options"
+            android:title="@string/button_title"
+            android:fragment="com.abc.settings.ButtonSettings" />
 
         <Preference
             android:key="abc_lockscreen_settings"
