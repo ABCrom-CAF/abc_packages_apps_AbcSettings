@@ -25,6 +25,7 @@
     <string name="volumerocker_settings_title">Volume and media</string>
     <string name="screen_settings_title">Display</string>
     <string name="other_settings_title">Other</string>
+    <string name="device_part_title">Device features</string>
     <string name="abc_leds">LED lights</string>
     <string name="abc_battery_light_settings">Battery charging light</string>
     <string name="abc_notification_light_settings">Notification light</string>

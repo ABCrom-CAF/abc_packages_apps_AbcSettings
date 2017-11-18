@@ -70,6 +70,16 @@
             android:key="abc_other_settings"
             android:fragment="com.abc.settings.OtherSettings"
         android:title="@string/other_settings_title"/>
+    
+        <!-- Device Part -->
+        <Preference
+            android:key="device_part"
+            android:persistent="false"
+            android:title="@string/device_part_title">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="org.omnirom.device"
+                 android:targetClass="org.omnirom.device.DeviceSettings"/>
+        </Preference>
 
     </PreferenceCategory>
 

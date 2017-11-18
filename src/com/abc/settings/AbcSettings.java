@@ -25,16 +25,27 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.android.settings.development.DevelopmentSettings;
+
 public class AbcSettings extends SettingsPreferenceFragment {
 
     private PreferenceCategory mLedsCategory;
+    private PreferenceCategory mDeviceCategory;
     private Preference mChargingLeds;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        final String KEY_DEVICE_PART = "device_part";
+        final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
         addPreferencesFromResource(R.xml.abc_settings_main);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        // DeviceParts
+	mDeviceCategory = (PreferenceCategory) findPreference("abc_sys");
+        if (!DevelopmentSettings.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            mDeviceCategory.removePreference(findPreference(KEY_DEVICE_PART));
+	}
 
         mLedsCategory = (PreferenceCategory) findPreference("abc_leds");
         mChargingLeds = (Preference) findPreference("abc_charging_light");
