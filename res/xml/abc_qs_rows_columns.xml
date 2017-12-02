@@ -43,5 +43,14 @@
         android:title="@string/qs_columns_landscape_title"
         android:max="9"
         settings:min="1"
-    settings:units="" />
+        settings:units="" />
+
+
+    <com.abc.settings.preferences.CustomSeekBarPreference
+        android:key="qqs_count"
+        android:title="@string/sysui_qqs_count_title"
+        android:max="8"
+        settings:min="3"
+        settings:units=""
+        android:persistent="false" />
 </PreferenceScreen>
